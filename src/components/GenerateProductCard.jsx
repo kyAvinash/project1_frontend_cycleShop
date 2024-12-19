@@ -8,7 +8,7 @@ const GenerateProductCard = ({ data, loading, error }) => {
   const handleAddToCart = async (productId, quantity) => {
     try {
       const response = await fetch(
-        "https://project1backend-navy.vercel.app/cart",
+        "https://project1-backend-six.vercel.app/cart",
         {
           method: "POST",
           headers: {
@@ -34,7 +34,7 @@ const GenerateProductCard = ({ data, loading, error }) => {
   const handleUpdateFavorite = async (productId, isFav) => {
     try {
       const response = await fetch(
-        `https://project1backend-navy.vercel.app/products/favorite/isFavorite/${productId}`,
+        `https://project1-backend-six.vercel.app/products/favorite/isFavorite/${productId}`,
         {
           method: "POST",
           headers: {

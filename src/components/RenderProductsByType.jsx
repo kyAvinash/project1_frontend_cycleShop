@@ -6,7 +6,7 @@ const RenderProductsByType = ({
   filter = { brands: [], models: [], years: [], price: 0 },
 }) => {
   const { data, loading, error } = useFetch(
-    `https://project1backend-navy.vercel.app/products/type/${productType}`
+    `https://project1-backend-six.vercel.app/products/type/${productType}`
   );
 
   // Directly filter data without useMemo

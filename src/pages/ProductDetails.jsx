@@ -8,7 +8,7 @@ import RenderProductsByType from "../components/RenderProductsByType";
 const ProductDetails = () => {
   const { id } = useParams();
   const { data, loading, error } = useFetch(
-    `https://project1backend-navy.vercel.app/products/${id}`
+    `https://project1-backend-six.vercel.app/products/${id}`
   );
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
@@ -42,7 +42,7 @@ const ProductDetails = () => {
   const handleAddToCart = async () => {
     try {
       const response = await fetch(
-        "https://project1backend-navy.vercel.app/cart",
+        "https://project1-backend-six.vercel.app/cart",
         {
           method: "POST",
           headers: {

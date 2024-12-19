@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 const SearchResults = () => {
   const { query } = useParams();
   const { data, loading, error } = useFetch(
-    "https://project1backend-navy.vercel.app/products"
+    "https://project1-backend-six.vercel.app/products"
   );
 
   const filterProducts = () => {

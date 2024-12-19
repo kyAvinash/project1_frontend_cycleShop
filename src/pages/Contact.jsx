@@ -23,7 +23,7 @@ const Contact = () => {
     event.preventDefault();
     try {
       const response = await fetch(
-        "https://project1backend-navy.vercel.app/contacts",
+        "https://project1-backend-six.vercel.app/contacts",
         {
           method: "POST",
           headers: {

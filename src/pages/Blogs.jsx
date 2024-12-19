@@ -18,7 +18,7 @@ const Blogs = () => {
   const fetchBlogs = async () => {
     try {
       const response = await fetch(
-        "https://project1backend-navy.vercel.app/blogs"
+        "https://project1-backend-six.vercel.app/blogs"
       );
       const data = await response.json();
       setBlogs(data);
@@ -43,7 +43,7 @@ const Blogs = () => {
     event.preventDefault();
     try {
       const response = await fetch(
-        "https://project1backend-navy.vercel.app/blogs",
+        "https://project1-backend-six.vercel.app/blogs",
         {
           method: "POST",
           headers: {

@@ -8,7 +8,7 @@ const Header = () => {
 
   const fetchFavoriteCount = () => {
     fetch(
-      "https://project1backend-navy.vercel.app/products/favorite/isFavorite"
+      "https://project1-backend-six.vercel.app/products/favorite/isFavorite"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   const fetchCartCount = () => {
-    fetch("https://project1backend-navy.vercel.app/cart")
+    fetch("https://project1-backend-six.vercel.app/cart")
       .then((response) => response.json())
       .then((data) => {
         setCartCount(data?.length || 0); // Assuming data is an array

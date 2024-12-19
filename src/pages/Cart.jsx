@@ -11,7 +11,7 @@ const Cart = () => {
   // Fetch cart items on initial render
   const fetchCartItems = async () => {
     try {
-      const response = await fetch('https://project1backend-navy.vercel.app/cart');
+      const response = await fetch('https://project1-backend-six.vercel.app/cart');
       const data = await response.json();
       if (response.ok) {
         setCartItems(data);
@@ -39,7 +39,7 @@ const Cart = () => {
     const quantity = updatedQuantities[cartItemId];
     if (quantity) {
       try {
-        const response = await fetch(`https://project1backend-navy.vercel.app/cart/${cartItemId}`, {
+        const response = await fetch(`https://project1-backend-six.vercel.app/cart/${cartItemId}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ quantity }),
@@ -58,7 +58,7 @@ const Cart = () => {
 
   const handleRemove = async (cartItemId) => {
     try {
-      const response = await fetch(`https://project1backend-navy.vercel.app/cart/${cartItemId}`, {
+      const response = await fetch(`https://project1-backend-six.vercel.app/cart/${cartItemId}`, {
         method: 'DELETE'
       });
       if (response.ok) {
@@ -71,7 +71,7 @@ const Cart = () => {
 
   const handleDeleteAll = async () => {
     try {
-      const response = await fetch('https://project1backend-navy.vercel.app/cart', {
+      const response = await fetch('https://project1-backend-six.vercel.app/cart', {
         method: 'DELETE'
       });
       if (response.ok) {

@@ -3,7 +3,7 @@ import useFetch from "../useFetch";
 
 const Filter = ({ onFilterChange }) => {
   const { data, loading, error } = useFetch(
-    "https://project1backend-navy.vercel.app/products"
+    "https://project1-backend-six.vercel.app/products"
   );
 
   const [brandList, setBrandList] = useState([]);
