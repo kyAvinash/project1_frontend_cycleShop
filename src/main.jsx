@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import store from "./App/store";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
@@ -11,11 +12,12 @@ import About from "./pages/About";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Blogs from "./pages/Blogs";
-import Login from "./pages/Login";
+import Login from "./features/users/Login"
 import Cart from "./pages/Cart";
 import Favorite from "./pages/Favorite";
 import ProductDetails from "./pages/ProductDetails";
 import SearchResults from "./pages/SearchResults";
+import { Provider } from "react-redux";
 
 const router = createBrowserRouter([
 	{
@@ -66,6 +68,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
+		<Provider store={store}>
 		<RouterProvider router={router} />
+		</Provider>
 	</React.StrictMode>,
 );

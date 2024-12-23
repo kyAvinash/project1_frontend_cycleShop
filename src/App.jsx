@@ -5,18 +5,9 @@ import SearchBox from "./components/SearchBox";
 import RenderOurProductsCatlog from "./components/RenderOurProductsCatlog";
 import Filter from "./components/Filter";
 import { Link } from "react-router-dom";
-import Login from "./pages/Login";
+import Login from "./features/users/Login";
 
 export default function App() {
-  // authentication check
-
-  /*
-  const isAuthenticated = false;
-  
-  if (!isAuthenticated) {
-    return <Login />;
-  }
-*/
 
   const [filter, setFilter] = useState({
     brands: [],
